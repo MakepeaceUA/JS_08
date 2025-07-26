@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Поисковик фильмов</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Поисковик фильмов</h1>
+
+    <form id="search-form" class="form">
+      <input type="text" id="title" placeholder="Введите название фильма" required>
+      <select id="type">
+        <option value="">Всё</option>
+        <option value="movie">Фильмы</option>
+        <option value="series">Сериалы</option>
+        <option value="episode">Эпизоды</option>
+      </select>
+      <button type="submit">Поиск</button>
+    </form>
+
+    <div id="error-message" class="error-message"></div>
+    <div id="results" class="results"></div>
+    <div id="loader" class="loader" style="display: none;"></div>
+    <div id="pagination" class="pagination"></div>
+    <div id="more-container"></div>
+    <div id="movie-details" class="movie-details"></div>
+  </div>
+
+  <div id="modal" class="modal">
+  <div class="modal-content">
+    <span id="modal-close" class="modal-close">&times;</span>
+    <div id="modal-loader" class="loader"></div>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+  <script type="module" src="project.js"></script>
+</body>
+</html>
